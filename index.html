@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Fighting</title>
+    <title>Click Fight - Battle Arena</title>
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-    <h1>Click Fighting Game</h1>
-    <button id="startButton">Start Game</button>
-    <div id="gameArea" style="display:none;">
-        <h2>Click the button as fast as you can!</h2>
-        <button id="clickButton">Click Me!</button>
-        <p id="score">Score: 0</p>
-        <p id="timeLeft">Time Left: 10 seconds</p>
+    <div class="background-effects">
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
     </div>
-    <script src="./app.js"></script>
+
+    <div class="main-container">
+        <h1 class="game-title">
+            <span class="title-click">CLICK</span>
+            <span class="title-fight">FIGHT</span>
+        </h1>
+        <p class="subtitle">Battle Arena - Test Your Speed & Reflexes</p>
+        <button class="start-button" id="startBtn">START GAME</button>
+    </div>
+
+    <!-- Modal for game mode selection -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h2>Choose Game Mode</h2>
+            <div class="mode-buttons">
+                <button class="mode-button pvp-button" id="pvpBtn">
+                    Player vs Player
+                </button>
+                <button class="mode-button ai-button" id="aiBtn">
+                    Player vs AI
+                </button>
+            </div>
+            <button class="close-button" id="closeBtn">Close</button>
+        </div>
+    </div>
+    <script src="./js/home.js"></script>
 </body>
-</html>        
+</html>
